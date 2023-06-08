@@ -1,0 +1,22 @@
+header {
+  text-align: center;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.circle img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
