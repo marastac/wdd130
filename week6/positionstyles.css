@@ -1,0 +1,296 @@
+/* CSS - Nombre: "positionstyles.css" */
+/* Estilos de la actividad 1 */
+.content1 {
+  /* Este es el contenedor de los cuadros de la actividad 1. */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.red1 {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+  grid-column: 1 / 3;
+}
+
+.green1 {
+  width: 100%;
+  height: 200px;
+  background-color: green;
+}
+
+.yellow1 {
+  width: 100%;
+  height: 200px;
+  background-color: yellow;
+}
+
+.blue1 {
+  width: 100%;
+  height: 100px;
+  background-color: blue;
+  grid-column: 1 / 3;
+}
+/* Activity 2 styles */ 
+.content2 {
+  /* This is the parent of the activity 2 boxes. */
+  display: grid; 
+  grid-auto-columns: 50fr; 
+  grid-template-columns: 50px 50px 50px 50px 50px; 
+  grid-template-rows: 50fr 50fr 50fr 50fr 50fr; 
+  gap: 10px 10px;
+}
+
+.red2 {
+width: 100px; 
+height: 100px; 
+background-color: red; 
+grid-area: 1 / 1 / 3 / 3; 
+} 
+.green2 { 
+width: 100px; 
+height: 100px; 
+background-color: green; 
+grid-area: 2 / 2 / 4 / 4;
+} 
+.yellow2 {
+width: 100px; 
+height: 100px; 
+background-color: gold; 
+grid-area: 3 / 3 / 5 / 5;
+} 
+.blue2 {
+width: 100px; 
+height: 100px; 
+background-color: blue; 
+grid-area: 4 / 4 / 6 / 6;
+} 
+/* Activity 3 styles */ 
+.content3 {
+  /* This is the parent of the activity 3 boxes. */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-items: center;
+  grid-template-areas: 
+    "red3 red3"
+    "green3 yellow3"
+    "blue3 blue3"; 
+}
+.red3 {
+width: 90%; 
+height: 100px; 
+background-color: red;
+grid-column: 1 / 3; 
+
+} 
+.green3 {
+width: 80%; 
+height: 200px; 
+background-color: green;
+
+} 
+.yellow3 {
+width: 80%; 
+height: 200px; 
+background-color: gold;
+
+} 
+.blue3 {
+width: 90%;
+height: 100px; 
+background-color: blue; 
+grid-column: 1 / 3;
+ 
+} 
+
+/* Activity 4 styles */ 
+.content4 {
+  /* This is the parent of the activity 4 boxes. */
+  display: grid;
+  height: 400px;
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "red4 green4 ."
+    "red4 yellow4 ."
+    "red4 blue4 .";
+}
+.red4 {
+width: 400px; 
+height: 450px; 
+background-color: red; 
+grid-area: red4;
+} 
+.green4 {
+width: 300px; 
+height: 150px; 
+background-color: green;
+grid-area: green4;
+} 
+.yellow4 {
+width: 300px; 
+height: 150px; 
+background-color: gold; 
+grid-area: yellow4;
+} 
+.blue4 {
+width: 300px;
+height: 150px; 
+background-color: blue; 
+grid-area: blue4;
+}  
+/* Activity 5 styles */ 
+.content5 {
+  /* This is the parent of the activity 5 boxes. */
+  height: 400px;
+  display: grid;
+  grid-template-columns: 50fr 200fr;
+  grid-template-rows: 50fr 100fr 50fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.red5 { 
+width: 100%; 
+height: 100px; 
+background-color: red; 
+grid-area: 1 / 1 / 2 / 3;
+} 
+.green5 { 
+width: 100%; 
+height: 200px; 
+background-color: green;
+float:left
+grid-area: 2 / 1 / 3 / 2;  
+
+} 
+.yellow5 {
+width: 100%; 
+height: 200px; 
+background-color: gold; 
+grid-area: 2 / 2 / 3 / 3;
+
+
+} 
+.blue5 {
+width: 100%; 
+height: 100px; 
+background-color: blue; 
+grid-area: 3 / 1 / 4 / 3;
+} 
+/* Activity 6 styles */ 
+.content6 {
+  display: grid;
+  height: 400px;
+  grid-template-columns: repeat(6, 50fr);
+  grid-template-rows: repeat(6, 50fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  z-index: -10;
+  /* This is the parent of the activity 6 boxes. */
+}
+.red6 {
+width: 100%; 
+height: 200px; 
+background-color: red; 
+grid-area: 1 / 1 / 3 / 5;
+} 
+.green6 {
+width: 100%; 
+height: 200px; 
+background-color: green; 
+grid-area: 5 / 1 / 7 / 3;
+} 
+.yellow6 {
+width: 100%; 
+height: 400px; 
+background-color: gold; 
+grid-area: 3 / 5 / 7 / 7;
+} 
+.blue6 {
+width: 100%; 
+height: 400px; 
+background-color: blue;
+grid-area: 2 / 2 / 6 / 6 
+} 
+
+
+/* Do not make any changes below here */
+.activity {
+width: 70%; 
+margin: 20px auto; 
+font-family: Arial, sans-serif; 
+border: 1px solid black; 
+padding: 10px; 
+clear:both; 
+overflow: auto;
+} 
+
+.hint {
+border: 1px solid grey;
+background: #e0e0e0;
+padding: .5em;
+position: relative;
+margin: 1em 0;
+}
+.hint h3 {
+margin: 0;
+}
+.hint:hover {
+background: #d0d0d0;
+}
+.hint > div {
+display: none;
+}
+
+.hint input[type=checkbox] {
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0;
+z-index: 1;
+cursor: pointer;
+}
+
+.hint input[type=checkbox]:checked ~ div {
+display: block;
+}
+
+.hint i {
+position: absolute;
+transform: translate(-6px, 0);
+margin-top: 16px;
+right: 10px;
+top: -3px;
+}
+.hint i:before, .hint i:after {
+content: "";
+position: absolute;
+background-color: black;
+width: 3px;
+height: 9px;
+}
+.hint i:before {
+transform: translate(2px, 0) rotate(45deg);
+}
+.hint i:after {
+transform: translate(-2px, 0) rotate(-45deg);
+}
+
+.hint input[type=checkbox]:checked ~ i:before {
+transform: translate(-2px, 0) rotate(45deg);
+}
+.hint input[type=checkbox]:checked ~ i:after {
+transform: translate(2px, 0) rotate(-45deg);
+}
+.hint a {
+position: relative;
+z-index: 1;
+}
