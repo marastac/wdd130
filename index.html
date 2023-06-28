@@ -1,67 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Electric Vehicles</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" />
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
-
 <body>
-  <div id="content">
-    <header>
-      <a id="logo_link" href="index.html">
-        <img class="logo" src="images/logo.png" alt="Dry Oar Logo">
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Dry Oar Logo" class="logo" />
       </a>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="#">Page 2</a>
-        <a href="site-plan-rafting.html">Site Plan</a>
-        <a href="contactus.html">Contact Us</a>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">Page 2</a></li>
+          <li><a href="site-plan-rafting.html" class="nav-link">Site Plan</a></li>
+          <li><a href="contactus.html" class="nav-link">Contact Us</a></li>
+        </ul>
       </nav>
-      <div id="social-links">
-        <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="#" class="social-icon"><img src="images/twitter.png" alt="Twitter"></a>
-        <a href="#" class="social-icon"><img src="images/instagram.png" alt="Instagram"></a>
+      <div class="social-links">
+        <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook" /></a>
+        <a href="#" class="social-icon"><img src="images/twitter.png" alt="Twitter" /></a>
+        <a href="#" class="social-icon"><img src="images/instagram.png" alt="Instagram" /></a>
       </div>
-    </header>
-    <div id="motorcycle">
-      <div id="motorcycle-box">
-        <img id="motorcycle-img" src="images/motorcycle.png" alt="A beautiful electric motorcycle that is fashionable">
-      </div>
-      <section id="motorcycle-msg">
-        <h1 class="home-title">Have an Adventure</h1>
-        <h4>Make Memories with Dry Oar</h4>
-        <div class='button-box'>
-          <a class='book' href="contactus.html">Book Now</a>
-        </div>
-      </section>
     </div>
-    <main class="home-grid">
-      <section class="cars-card">
-        <img class="card-img vehicle-img" src="images/cars.jpg" alt="Small electric car">
-        <img class="icon" src="images/cars_icon.png" alt="Car icon">
+  </header>
+  <section id="hero">
+    <div class="container">
+      <div id="hero-box">
+        <img src="images/motorcycle.png" alt="Motorcycle" class="hero-img" />
+        <div id="hero-msg">
+          <h1 class="home-title">Experience Adventure</h1>
+          <h4>Create Memories with Dry Oar</h4>
+          <div class="button-box">
+            <a href="contactus.html" class="book">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main class="home-grid">
+    <div class="container">
+      <section class="card cars-card">
+        <img src="images/cars.jpg" alt="Small electric car" class="card-img" />
+        <img src="images/cars_icon.png" alt="Car icon" class="icon" />
         <h2>Cars</h2>
       </section>
-      <section class="motorcycles-card">
-        <img class="card-img vehicle-img" src="images/motorcycles.jpg" alt="Electric motorcycle model Miku">
-        <img class="icon" src="images/motorcycles_icon.jpg" alt="Motorcycle icon">
+      <section class="card motorcycles-card">
+        <img src="images/motorcycles.jpg" alt="Miku electric motorcycle model" class="card-img" />
+        <img src="images/motorcycles_icon.jpg" alt="Motorcycle icon" class="icon" />
         <h2>Motorcycles</h2>
       </section>
-      <section class="scooters-card">
-        <img class="card-img vehicle-img" src="images/scooter.jpg" alt="Model XO scooter">
-        <img class="icon" src="images/scooter_icon.png" alt="Scooter icon">
+      <section class="card scooters-card">
+        <img src="images/scooter.jpg" alt="XO scooter model" class="card-img" />
+        <img src="images/scooter_icon.png" alt="Scooter icon" class="icon" />
         <h2>Scooters</h2>
       </section>
-      <img class="vehicle" src="images/vehicle.jpg" alt="Animated vehicle">
+      <img src="images/vehicle.jpg" alt="Animated vehicle" class="vehicle" />
       <section class="msg">
-        <h2>More Than Just The Thrill</h2>
+        <h2>More Than Just Thrills</h2>
         <p>"The future is in your hands and in electric driving. Choose innovation, choose sustainability, choose an electric vehicle. Make a choice that drives change and builds a better world."</p>
       </section>
-    </main>
-    <footer>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="#">Page 2</a>
@@ -69,8 +75,7 @@
         <a href="contactus.html">Contact Us</a>
       </div>
       <p>&copy; 2023 Dry Oar. All rights reserved.</p>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </body>
-
 </html>
