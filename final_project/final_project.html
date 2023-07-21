@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>petRent - Temporary Pet Rental</title>
   <link rel="stylesheet" href="style_f/style_final.css" />
+  <link rel="stylesheet" href="style_f/slideshow.css" />
 </head>
 <body>
   <header>
@@ -30,13 +31,24 @@
   <section id="hero">
     <div class="container">
       <div id="hero-box">
-        <img src="images_final/dogs.jpg" alt="dog" class="hero-img" />
-        <div id="hero-msg">
-          <h1 class="home-title">Enjoy the Company of a Pet</h1>
-          <h4>Experience Joy and Love</h4>
-          <div class="button-box">
-            <a href="contact.html" class="book">Rent Now</a>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images_final/dogs.jpg" style="width:100%" />
+            <div class="text">Caption Text</div>
           </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images_final/chameleon.jpg" style="width:100%" alt="dog" class="card-img" />
+            <div class="text">Caption Two</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images_final/puppy.jpg" style="width:100%" alt="dog" class="card-img" />
+            <div class="text">Caption Three</div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
       </div>
     </div>
@@ -96,5 +108,34 @@
       <p>&copy; 2023 petRent. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    // Código JavaScript de la presentación de diapositivas
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
 </body>
 </html>
