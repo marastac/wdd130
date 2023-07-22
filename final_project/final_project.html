@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>petRent - Temporary Pet Rental</title>
-  <link rel="stylesheet" href="style_f/style_final.css" />
-  <link rel="stylesheet" href="style_f/slideshow.css" />
+  <link rel="stylesheet" href="style_f/style_final.css">
+  <link rel="stylesheet" href="style_f/slideshow.css">
+  <link rel="stylesheet" href="category1.css">
 </head>
 <body>
   <header>
@@ -16,7 +17,7 @@
       <nav>
         <ul>
           <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="#" class="nav-link">Category 1</a></li>
+          <li><a href="category1.html" class="nav-link">Category 1</a></li>
           <li><a href="#" class="nav-link">Category 2</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -34,21 +35,25 @@
         <div class="slideshow-container">
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="images_final/dogs.jpg" style="width:100%" />
-            <div class="text">Caption Text</div>
+            <img src="images_final/dogs.jpg" style="width:100%" alt="dog" class="card-img" />
           </div>
           <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
             <img src="images_final/chameleon.jpg" style="width:100%" alt="dog" class="card-img" />
-            <div class="text">Caption Two</div>
           </div>
           <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
             <img src="images_final/puppy.jpg" style="width:100%" alt="dog" class="card-img" />
-            <div class="text">Caption Three</div>
           </div>
           <a class="prev" onclick="plusSlides(-1)">❮</a>
           <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <div id="hero-msg">
+          <h1 class="home-title">More Than Just Pets</h1>
+          <h4>Discover the joy and love that pets bring. At petRent, we help you find the perfect pet for any occasion. Experience unforgettable moments and create new memories with our adorable companions.</h4>
+          <div class="button-box">
+            <a href="contact.html" class="book">Book Now</a>
+          </div>
         </div>
       </div>
     </div>

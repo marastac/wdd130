@@ -55,7 +55,7 @@ nav ul li {
 /* Hero section styles */
 #hero {
   padding: 80px 0;
-  color: hsl(48, 100%, 82%);
+  color: hsl(48, 81%, 56%);
 }
 
 #hero-box {
@@ -90,7 +90,7 @@ nav ul li {
 .book {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #37ed00;
+  background-color: #10ed00;
   color: #633300;
   text-decoration: none;
   border-radius: 5px;
@@ -145,7 +145,7 @@ h2 {
 .msg {
   margin-top: 30px;
   text-align: center;
-  background-color: #81c750;
+  background-color: #5da22b;
   color: #000000;
   padding: 20px;
   border-radius: 5px;
@@ -195,5 +195,85 @@ footer {
   #hero-msg {
     margin-left: 0;
     text-align: center;
+  }
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 11px;
   }
 }
