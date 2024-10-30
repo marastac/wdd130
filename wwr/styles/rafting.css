@@ -50,7 +50,7 @@ nav {
 }
 
 .navigation li {
-	flex: 1 1 100%;
+    flex: 1 1 100%;
 }
 
 .navigation a {
@@ -64,7 +64,7 @@ nav {
 .navigation a:hover {
     color: var(--secondary-color);
     font-weight: 700;
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 main {
@@ -149,7 +149,6 @@ footer .sociallinks img {
     height: auto;
 }
 
-
 .information {
     max-width: 1200px;
     margin: 2rem auto;
@@ -161,7 +160,6 @@ footer .sociallinks img {
     margin-bottom: 2rem;
 }
 
-
 .company-details {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -170,13 +168,11 @@ footer .sociallinks img {
     text-align: center;
 }
 
-
 .company-details .contact-item img {
     width: 40px;
     height: auto;
     margin-bottom: 1rem;
 }
-
 
 .map-container {
     width: 100%;
@@ -189,14 +185,12 @@ footer .sociallinks img {
     border: none;
 }
 
-
 .employee-profiles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin: 2rem 0;
 }
-
 
 form {
     max-width: 800px;
@@ -270,3 +264,140 @@ button[type="submit"]:hover {
     background-color: var(--secondary-color);
 }
 
+/* Nuevos estilos para index.html */
+.hero-home {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero-home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-signup {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.newsletter-form button {
+    grid-column: span 2;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.feature-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design para index.html */
+@media (max-width: 768px) {
+    .newsletter-form {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form button {
+        grid-column: 1;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+}
