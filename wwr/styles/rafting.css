@@ -14,65 +14,93 @@ body {
     background-color: var(--bg-color);
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Header y navegación */
+/* Header y navegación mejorados */
 header {
     display: grid;
-    grid-template-columns: 120px 1.5fr 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 1rem;
     background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 header img {
-    width: 150px;
-    margin: 0 0.25rem 0 1rem;
+    width: 100px;
     height: auto;
 }
 
 header h1 {
     color: white;
-    margin-left: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-family: Acme, Arial, sans-serif;
+    margin: 0;
 }
 
 nav {
     display: flex;
     justify-content: flex-end;
-    text-align: right;
-    font-size: 2rem;
+    align-items: center;
 }
 
 .navigation {
     display: flex;
-    gap: 6rem;
+    justify-content: flex-end;
+    align-items: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
 }
 
 .navigation li {
-    flex: 1 1 100%;
+    position: relative;
 }
 
 .navigation a {
-    display: block;
     color: white;
     text-decoration: none;
-    padding: 20px;
-    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: block;
 }
 
 .navigation a:hover {
     color: var(--secondary-color);
-    font-weight: 700;
-    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
 }
 
 /* Estilos principales */
 main {
     padding: 2rem;
+    flex: 1;
 }
 
 /* Estilos para la página Home */
@@ -137,6 +165,7 @@ main {
     background-color: var(--primary-color);
     color: white;
     margin: 2rem 0;
+    border-radius: 8px;
 }
 
 .features-grid {
@@ -162,40 +191,74 @@ main {
     margin-bottom: 1rem;
 }
 
-/* Estilos para la página About */
+/* Estilos para la página About mejorados */
 .hero {
     text-align: center;
+    padding: 3rem 1rem;
+    background-color: white;
     margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
 }
 
 .hero img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .history {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
     align-items: center;
-    padding: 2rem 0;
+    background-color: white;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.history h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--primary-color);
 }
 
 .history article {
-    max-width: 500px;
-    padding-right: 1rem;
+    padding: 0;
 }
 
 .history img {
-    width: 200px;
+    width: 100%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .adventures {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    padding: 2rem;
+    background-color: white;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 8px;
 }
 
 figure {
@@ -205,6 +268,12 @@ figure {
     padding: 5px;
     max-width: 220px;
     margin: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
 }
 
 .adventures figure {
@@ -215,6 +284,7 @@ figure {
     max-width: 220px;
     max-height: 150px;
     height: auto;
+    border-radius: 4px;
 }
 
 figcaption {
@@ -223,6 +293,7 @@ figcaption {
     font: italic smaller sans-serif;
     padding: 3px;
     text-align: center;
+    border-radius: 0 0 4px 4px;
 }
 
 /* Estilos para la página Contact */
@@ -235,6 +306,7 @@ figcaption {
 .information h2 {
     text-align: center;
     margin-bottom: 2rem;
+    color: var(--primary-color);
 }
 
 .company-details {
@@ -243,6 +315,13 @@ figcaption {
     gap: 2rem;
     margin-bottom: 2rem;
     text-align: center;
+}
+
+.contact-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .contact-item img {
@@ -254,6 +333,9 @@ figcaption {
 .map-container {
     width: 100%;
     margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .map-container iframe {
@@ -284,6 +366,7 @@ form {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
+    color: var(--text-color);
 }
 
 .form-group input,
@@ -314,6 +397,7 @@ textarea {
     cursor: pointer;
     width: 100%;
     font-size: 1.1rem;
+    transition: background-color 0.3s ease;
 }
 
 .form-button:hover {
@@ -329,6 +413,7 @@ textarea {
     text-align: center;
     padding: 4rem 2rem;
     margin-bottom: 2rem;
+    border-radius: 8px;
 }
 
 .trips-hero h1 {
@@ -349,7 +434,7 @@ textarea {
     border-radius: 4px;
     text-decoration: none;
     margin-top: 1rem;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -368,6 +453,11 @@ textarea {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
 }
 
 .trip-card img {
@@ -404,6 +494,7 @@ textarea {
 .trips-table h2 {
     text-align: center;
     margin-bottom: 2rem;
+    color: var(--primary-color);
 }
 
 table {
@@ -411,6 +502,8 @@ table {
     border-collapse: collapse;
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 th, td {
@@ -430,21 +523,28 @@ tr:hover {
 
 /* Footer */
 footer {
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
     background-color: var(--primary-color);
     color: white;
+    margin-top: auto;
 }
 
 footer .sociallinks {
     display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 footer .sociallinks img {
     width: 30px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+footer .sociallinks img:hover {
+    transform: translateY(-3px);
 }
 
 /* Media Queries */
@@ -452,11 +552,18 @@ footer .sociallinks img {
     header {
         grid-template-columns: 1fr;
         text-align: center;
+        padding: 1rem;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 1rem;
     }
 
     .navigation {
         flex-direction: column;
         gap: 0.5rem;
+        align-items: center;
     }
 
     .company-details,
@@ -466,8 +573,9 @@ footer .sociallinks img {
     }
 
     .history {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
+        gap: 1.5rem;
     }
 
     table {
@@ -476,7 +584,5 @@ footer .sociallinks img {
     }
 
     .adventures {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
-}
